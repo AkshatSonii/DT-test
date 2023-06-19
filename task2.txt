@@ -1,0 +1,25 @@
+object model of a nudge 
+
+1. Tag: tag of the event
+2. Title: title of the event
+3. Files: files[image] 
+4. Schedule: (Date + Time) timestamp
+5. Description: String
+6. Icon: files upload.
+7. Invitation: Invitation for the event
+
+
+API
+
+Reuest   Base         API endpoint     payload              Description
+type     URL
+
+GET     api/app      /events/:id                           get the information of the event of a particular objectID.
+
+POST    api/app      /events        tag,title,files,       creates an event.
+                                    Description,Icon,
+                                    Invitation
+
+PUT     api/app      /events/:id    same as POST payload    
+
+DELETE  api/app      /events/:id                            delete event based on its unique ID.
